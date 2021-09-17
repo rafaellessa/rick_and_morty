@@ -10,7 +10,7 @@ const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <StatusBar barStyle="light-content" />
-      <Home />
+      <Splash />
     </ThemeProvider>
   );
 };
