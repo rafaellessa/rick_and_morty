@@ -1,3 +1,4 @@
+import {FlatList} from 'react-native';
 import {RFPercentage, RFValue} from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
 
@@ -26,3 +27,7 @@ export const ListTitle = styled.Text`
   font-size: ${RFValue(16)}px;
   margin-bottom: 14px;
 `;
+
+export const PersonList = styled.FlatList.attrs({
+  showsVerticalScrollIndicator: false,
+})`` as unknown as typeof FlatList;
