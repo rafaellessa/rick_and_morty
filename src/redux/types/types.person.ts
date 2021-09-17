@@ -28,8 +28,12 @@ export interface State {
 }
 
 export type PersonState = ImmutableObject<State>;
-
-export type RequestGetAllPersons = Action<PersonActionTypes>;
+export interface RequestGetAllPersonsParams {
+  offset?: number;
+}
+export interface RequestGetAllPersons extends Action<PersonActionTypes> {
+  data?: RequestGetAllPersonsParams;
+}
 
 export interface SuccessGetAllPersons extends Action<PersonActionTypes> {
   persons: Person[];
@@ -40,7 +44,7 @@ export interface FailureGetAllPersons extends Action<PersonActionTypes> {
 }
 
 export interface CreatorTypes {
-  requestGetAllPersons(): RequestGetAllPersons;
+  requestGetAllPersons(data?: RequestGetAllPersonsParams): RequestGetAllPersons;
   successGetAllPersons(persons: Person[]): SuccessGetAllPersons;
   failureGetAllPersons(error: string | null): FailureGetAllPersons;
 }

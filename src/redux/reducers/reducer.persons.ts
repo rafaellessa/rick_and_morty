@@ -10,7 +10,7 @@ import {AppReducers} from '../types/types.redux';
 
 const {Types, Creators} = createActions<PersonActionTypes, CreatorTypes>(
   {
-    requestGetAllPersons: [],
+    requestGetAllPersons: ['data'],
     successGetAllPersons: ['persons'],
     failureGetAllPersons: ['error'],
     reset: null,

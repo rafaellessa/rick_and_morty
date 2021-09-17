@@ -1,21 +1,22 @@
 import React from 'react';
-
+import {SvgProps} from 'react-native-svg';
 import {Container, Title} from './styles';
 
-import Person from '../../assets/person.svg';
-import Location from '../../assets/location.svg';
-import Movies from '../../assets/movies.svg';
-
 interface HighlightProps {
-  key: string;
   title: string;
+  SVG: React.FC<SvgProps>;
+  onPressCategory: () => void;
 }
 
-const HighlightCard: React.FC = () => {
+const HighlightCard: React.FC<HighlightProps> = ({
+  title,
+  SVG,
+  onPressCategory,
+}) => {
   return (
-    <Container>
-      <Person width={50} height={50} />
-      <Title>Personagens</Title>
+    <Container onPress={onPressCategory}>
+      <SVG width={50} height={50} />
+      <Title>{title}</Title>
     </Container>
   );
 };
