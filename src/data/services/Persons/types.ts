@@ -4,19 +4,7 @@ export interface PersonApi {
   status: string;
   species: string;
   type: string;
-  gender: 'male' | 'female';
-  location: string;
-  image: string;
-  episode: Array<string>;
-}
-
-export interface Person {
-  id: string;
-  name: string;
-  status: string;
-  species: string;
-  type: string;
-  gender: 'masculino' | 'femenino';
+  gender: 'Male' | 'Female';
   location: string;
   image: string;
   episode: Array<string>;
