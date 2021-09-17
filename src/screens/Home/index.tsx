@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../../components/Header';
 import HighlightCard from '../../components/HighlightCard';
+import ListItem from '../../components/ListItem';
 
 import {
   Container,
@@ -20,6 +21,7 @@ const Home: React.FC = () => {
       </HighlightCardsWrapper>
       <ContentWrapper>
         <ListTitle>Listagem</ListTitle>
+        <ListItem />
       </ContentWrapper>
     </Container>
   );

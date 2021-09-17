@@ -16,11 +16,13 @@ export const HighlightCardsWrapper = styled.View`
 
 export const ContentWrapper = styled.View`
   padding: 0 24px;
+  margin-top: ${RFPercentage(10)}px;
+  flex: 1;
 `;
 
 export const ListTitle = styled.Text`
-  margin-top: ${RFPercentage(10)}px;
   color: ${({theme}) => theme.colors.white};
   font-family: ${({theme}) => theme.fonts.bold};
   font-size: ${RFValue(16)}px;
+  margin-bottom: 14px;
 `;
