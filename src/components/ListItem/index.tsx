@@ -1,4 +1,6 @@
 import React from 'react';
+import {TouchableOpacityProps} from 'react-native';
+import {Person} from '../../redux/types/types.person';
 
 import {
   Container,
@@ -8,16 +10,20 @@ import {
   LikeIconWrapper,
 } from './styles';
 
-const ListItem: React.FC = () => {
+interface ListItemProps extends TouchableOpacityProps {
+  data: Person;
+}
+
+const ListItem: React.FC<ListItemProps> = ({data, ...rest}) => {
   return (
-    <Container>
+    <Container {...rest}>
       <InfoWrapper>
         <ImageItem
           source={{
-            uri: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
+            uri: data.image,
           }}
         />
-        <Title>Rick Sanchez</Title>
+        <Title>{data.name}</Title>
       </InfoWrapper>
       <LikeIconWrapper />
     </Container>
