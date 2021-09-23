@@ -47,6 +47,13 @@ const Home: React.FC = () => {
             onEnd={() => console.tron.log('Passei na tela')}
           />
         );
+      default:
+        return (
+          <PersonList
+            data={persons}
+            onEnd={() => console.tron.log('Passei na tela')}
+          />
+        );
     }
   }, [index]);
 
